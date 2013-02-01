@@ -1,0 +1,21 @@
+<!-- <html>
+    <head><title>This is my database!</title></head>
+    <body>
+        <h1>Task List</h1>
+        <h1>This is a list of all the tasks: {{ tasks }}</h1>
+    </body>
+</html> -->
+ 
+
+<html>
+    <head><title>This is my database!</title></head>
+    <body>
+        <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css">
+        <h1>Task List</h1>
+        <ul>
+        {% for task in tasks %}
+        <li>Task {{ task['id'] }}: {{ task['title'] }}: {{ task['completed_at'] }}</li>
+        {% endfor %}
+        </ul>
+    </body>
+</html>
